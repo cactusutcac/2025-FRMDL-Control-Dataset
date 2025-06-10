@@ -34,7 +34,7 @@ python preprocess/ixmas_extract_vid.py # Extract all videos from chosen frames
 python preprocess/ixmas_extract_vid_6.py # Keep only the 6 selected actions
 python preprocess/ixmas_parser.py # Generate structured metadata 
 ```
-1. Generate the control dateset:  
+1. Generate the control dataset:  
 ```bash
 python trim_vid.py # Cut videos to exactly 32 consecutive frames 
 python shuffle_chunks.py # Shuffle each video 
