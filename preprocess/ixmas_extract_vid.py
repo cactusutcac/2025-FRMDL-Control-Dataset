@@ -1,10 +1,9 @@
 import os
 import shutil
 
-# Paths
-image_dir = "preprocess/IXMAS_720"   # Folder with selected .jpg images 
-video_dir = "preprocess/IXMAS_raw"   # Folder with all the original dataset 
-output_video_dir = "IXMAS"  # Output folder for matching videos 
+image_dir = "preprocess/IXMAS_720" # Folder with selected .jpg images 
+video_dir = "preprocess/IXMAS_raw" # Folder with the original dataset 
+output_video_dir = "IXMAS" # Output folder for matching videos 
 
 os.makedirs(output_video_dir, exist_ok=True)
 
@@ -20,5 +19,3 @@ for base in image_basenames:
         shutil.copy2(video_path, output_path)
     else:
         print(f"Missing video: {video_filename}")
-
-print("Finished copying selected videos!")

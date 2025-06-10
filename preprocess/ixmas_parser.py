@@ -76,7 +76,7 @@ def generate_ixmas_clips(video_dir):
     return output
 
 if __name__ == "__main__":
-    input_dir = "IXMAS"  # folder with .avi videos
+    input_dir = "IXMAS"
     output_json = "ixmas_clips.json"
 
     clips = generate_ixmas_clips(input_dir)

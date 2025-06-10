@@ -10,7 +10,7 @@ _Privacy-Preserving Action Recognition via Motion Difference Quantization_ ?
 - `datasets/ixmas_clips_6.json`: structured clip metadata generated from parsers 
 
 ### Preprocessing Scripts 
-- `preprocess/IXMAS_720`: 720 manually selected representative frames 
+- `preprocess/IXMAS_720`: 720 manually selected representative frames (10 subject, 12 classes, 2 viewpoints, 3 performance of each action)
 - `preprocess/ixmas_extract_frame.py`: extracts and saves a representative frame from each IXMAS video 
 - `preprocess/ixmas_extract_vid.py`: locates and copies videos matching selected frame names (e.g., for `IXMAS_720/`) 
 - `preprocess/ixmas_extract_vid_class.py`: filters and saves videos belonging to six selected actions 
@@ -22,7 +22,16 @@ _Privacy-Preserving Action Recognition via Motion Difference Quantization_ ?
 ```bash
 pip install -r requirements.txt
 ```
-3. Generate the control dateset 
+3. Preprocess the original dataset: 
+```bash
+python preprocess/ixmas_extract_vid.py
+python preprocess/ixmas_extract_vid_6.py
+python preprocess/ixmas_parser.py
+```
+4. Generate the control dateset:  
+```bash
+?
+```
 
 ## References 
 [1] S. Kumawat and H. Nagahara, “Privacy-Preserving Action Recognition via Motion Difference Quantization,” Aug. 2022.

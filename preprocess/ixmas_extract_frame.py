@@ -1,12 +1,10 @@
 import os
 import cv2
 
-# Paths
-source_dir = "dataset_preprocess/IXMAS_preprocess/IXMAS_raw"        # Folder with 3600 .avi videos
-output_dir = "dataset_preprocess/IXMAS_preprocess/IXMAS_img"    # Folder to save extracted images
+source_dir = "dataset_preprocess/IXMAS_preprocess/IXMAS_raw" # Folder with 3600 .avi videos
+output_dir = "dataset_preprocess/IXMAS_preprocess/IXMAS_img" # Folder to save extracted images
 os.makedirs(output_dir, exist_ok=True)
 
-# Process each .avi file
 for filename in os.listdir(source_dir):
     if filename.endswith(".avi"):
         video_path = os.path.join(source_dir, filename)
@@ -30,5 +28,3 @@ for filename in os.listdir(source_dir):
             print(f"Failed to read frame from: {filename}")
 
         cap.release()
-
-print("Images saved in:", output_dir)
