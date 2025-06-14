@@ -2,7 +2,7 @@
 ## Project Overview 
 This repository provides the code and data pipeline for constructing a control dataset designed to evaluate the **temporal sensitivity** of the BDQ encoder introduced in the paper _Privacy-Preserving Action Recognition via Motion Difference Quantization_ [1]. 
 
-The goal is to test whether BDQ's performance in action recognition and identity suppression truly relies on inter-frame motion cues. Based on a subset of the IXMAS dataset, we construct two matched conditions for each video clip: 
+The goal is to test whether BDQ's performance in action recognition and identity suppression truly relies on inter-frame motion cues. Based on a subset of the IXMAS dataset [2], we construct two matched conditions for each video clip: 
 - Original sequences: 32 consecutive frames with intact temporal order 
 - Shuffled sequences: the same frames divided into 4 chunks of 8 and randomly reordered to disrupt global temporal flow 
 
